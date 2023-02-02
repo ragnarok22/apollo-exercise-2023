@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "graphql-server-example",
+  "scripts": {
+    "build": "yarn generate && tsc",
+    "start": "yarn build && node ./dist/index.js",
+    "generate": "gql-gen --config codegen.yml"
+  },
+  "packageManager": "yarn@3.3.1",
+  "dependencies": {
+    "@apollo/server": "^4.3.2",
+    "firebase": "^9.16.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.16.5",
+    "@graphql-codegen/introspection": "^2.2.3",
+    "@graphql-codegen/typescript": "^2.8.8",
+    "@graphql-codegen/typescript-resolvers": "^2.7.13",
+    "@types/node": "^18.11.18",
+    "graphql-codegen-typescript-common": "0.18.2",
+    "typescript": "^4.9.5"
+  }
+}
