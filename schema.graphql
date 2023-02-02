@@ -1,5 +1,6 @@
 type Query {
     books: [Book]
+    hello(name: String): String
 }
 
 type Book {
@@ -8,9 +9,6 @@ type Book {
 }
 
 type AddBookMutationResponse {
-    code: String!
-    success: Boolean!
-    message: String!
     book: Book
 }
 

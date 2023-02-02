@@ -2,14 +2,17 @@
   "type": "module",
   "name": "graphql-server-example",
   "scripts": {
-    "build": "yarn generate && tsc",
-    "start": "yarn build && node ./dist/index.js",
+    "build": "npm run generate && tsc",
+    "start": "npm run build && node ./dist/index.js",
     "generate": "gql-gen --config codegen.yml"
   },
-  "packageManager": "yarn@3.3.1",
   "dependencies": {
     "@apollo/server": "^4.3.2",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "firebase": "^9.16.0",
+    "fs": "^0.0.1-security",
     "graphql": "^16.6.0"
   },
   "devDependencies": {
