@@ -33,13 +33,22 @@ const getBooks = async () => {
 
 const addBook = async (_, {title, author}) => {
   try {
-    const bookDoc = await addDoc(collection(getFirestore(), 'books'), {
+    const bookId = await addDoc(collection(getFirestore(), 'books'), {
       title,
       author
     }).then(value => {
-      return value
+      return value.id
     })
-    console.log(bookDoc)
+    return {
+      code: 200,
+      success: true,
+      message: "Book created successfully",
+      book: {
+        id: bookId,
+        title,
+        author
+      }
+    }
   } catch (error) {
     console.error('error creating book')
   }
